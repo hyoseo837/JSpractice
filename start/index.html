@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="abox" id="Alert">
+        <p>아이디를 입력해주세요</p>
+
+    </div>
+    <button onclick="Alert('block','아이디를 입력해주세요')">b</button>
+    <button onclick="Alert('block','비번을 입력해주세요')">a</button>
+
+    <script>
+        function Alert(to, what) {
+            document.getElementById('Alert').style.display = to;
+            document.getElementById('Alert').innerHTML = what;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
