@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='tap' id='farm' onmouseenter="document.getElementById(farmTab).style.display = 'block'">
+        <button onclick="opentab('farmTab', 'none')">hello</button>
+        <button onclick="opentab('farmTab', 'block')">hello</button>
+        <p id='farmTab' style="display:none;">hello guyys</p>
+    </div>
+
+    <script>
+        function opentab(id, to) {
+            document.getElementById(id).style.display = to
+        }
+    </script>
+</body>
+
+</html>
