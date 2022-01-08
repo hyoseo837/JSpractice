@@ -32,7 +32,7 @@ class App {
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
 
-        drawFractals(this.ctx, 5, [100, 100], 1);
+        drawFractals(this.ctx, 3, [100, 100], 1);
 
     }
 
