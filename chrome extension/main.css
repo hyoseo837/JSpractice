@@ -1,5 +1,22 @@
 button {
-    height: 50px;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+}
+
+body {
+    min-width: 220px;
+}
+
+.setting {
     width: 50px;
-    background-color: violet;
+}
+
+#up{
+    background-color: tomato;
+}
+#down{
+    background-color: skyblue;
 }
