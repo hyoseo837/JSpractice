@@ -1,5 +1,5 @@
 {
-    "name" : "study extension",
+    "name" : "guessing number extension",
     "description" : "this extension is for studying JS",
     "version" : "1.0",
     "manifest_version" : 3,
