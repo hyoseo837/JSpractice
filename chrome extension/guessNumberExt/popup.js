@@ -20,21 +20,27 @@ guessing.addEventListener("click",guessTheNumber)
 function guessTheNumber(){
     if (target == -1){
         target = Math.floor((Math.random() * 100) + 1);
+        guess = 50; max = 100; min = 0;
+        guessing.style.backgroundColor = "#efefef"
         count = 0;
-    }
-    if (guess == target){
-        demo.innerHTML = "you got it in "+count+" trials!!!"
-        target = -1;
-    }
-    else{
-        count++
-        if (guess > target){
-            max = guess
-            demo.innerHTML = "it's smaller" + range(max,min)
+        demo.innerHTML = "Guess!!" + range(max,min)
         }
-        if (guess < target){
-            min = guess 
-            demo.innerHTML = "it's bigger" + range(max,min)
+    else {
+        if (guess == target){
+            demo.innerHTML = "you got it in "+count+" trials!!!"
+            guessing.style.backgroundColor = "#00ff00"
+            target = -1;
+        }
+        else {
+            count++
+            if (guess > target){
+                max = guess
+                demo.innerHTML = "it's smaller" + range(max,min)
+            }
+            if (guess < target){
+                min = guess 
+                demo.innerHTML = "it's bigger" + range(max,min)
+            }
         }
     }
 }
