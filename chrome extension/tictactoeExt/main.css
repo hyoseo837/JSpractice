@@ -3,6 +3,14 @@
     height: 50px;
     margin-left : 5px;
     margin-top : 5px;
+    background-color: #cdcdcd;
+}
+
+#game{
+    width: 165px;
+    height: 30px;
+    margin-left : 5px;
+    margin-top : 5px;
 }
 
 body {
