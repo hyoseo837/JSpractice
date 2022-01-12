@@ -21,6 +21,7 @@ function guessTheNumber(){
     if (target == -1){
         target = Math.floor((Math.random() * 100) + 1);
         guess = 50; max = 100; min = 0;
+        guessing.innerHTML = guess;
         guessing.style.backgroundColor = "#efefef"
         count = 0;
         demo.innerHTML = "Guess!!" + range(max,min)
