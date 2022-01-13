@@ -3,6 +3,8 @@ let turn = 0;
 let sign = ["o","x"]
 let colors = ["tomato","skyblue"]
 let done = false;
+let score = [0,0];
+
 
 let para = document.getElementById("demo")
 let btns = []
@@ -16,14 +18,15 @@ btns.push(document.getElementById('6'))
 btns.push(document.getElementById('7'))
 btns.push(document.getElementById('8'))
 let game = document.getElementById("game")
+let scoreboard = document.getElementById("scoreboard")
 
 
 for(let i=0; i<9;i++){
     btns[i].addEventListener("click",()=>{
-        if (board[i] == "" && !done){
+        if (board[i] == "" && done == false){
             board[i] = sign[turn];
-            turn = Number(!turn);
             btns[i].style.backgroundColor = colors[turn];
+            turn = Number(!turn);
             checkwin();
         }
     })
@@ -36,17 +39,21 @@ game.addEventListener("click",()=>{
     for(let i=0; i<9;i++){
         btns[i].style.backgroundColor = "#cdcdcd";
     }
+    para.innerHTML = "TicTacToe";
 })
 
 function checksame(a,b,c){
-    if (board[a] = board[b] && board[b]==board[c] && board[a] != ""){
+    if (board[a] == board[b] && board[b]==board[c] && board[a] != ""){
         done = true;
-        if (board[0] == "o"){
+        if (board[a] == "o"){
             para.innerHTML = "player 1 win";
+            score[0] += 1;
         }
-        if (board[0] == "x"){
+        if (board[a] == "x"){
             para.innerHTML = "player 2 win";
+            score[1] += 1;
         }
+        scoreboard.innerHTML = score[0]+" : "+score[1]
     }
 }
 

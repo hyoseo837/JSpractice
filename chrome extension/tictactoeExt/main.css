@@ -14,10 +14,15 @@
 }
 #demo {
     color: azure;
+    font-size: large;
+    text-align: center;
+}
+#scoreboard{
+    color: azure;
+    text-align: center;
 }
 
 body {
     min-width: 180px;
-    min-height: 200px;
     background-color: #303030;
 }
